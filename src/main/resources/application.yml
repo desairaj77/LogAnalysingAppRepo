@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: logger-analysis
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:file:db/logtracker;DB_CLOSE_DELAY=1000
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+spring.jpa.properties.hibernate.jdbc.batch_size: 500
+spring.jpa.properties.hibernate.order_inserts: true
+
+maximumTimeLimit: 4
+
+pathToSourceFile: src/main/resources/logs/
